@@ -1,0 +1,53 @@
+# ═══════════════════════════════════════════════════════
+# Jet Pipeline V6 — Requirements
+# ═══════════════════════════════════════════════════════
+#
+# Run these commands IN ORDER in your terminal.
+#
+# ─────────────────────────────────────────────
+# STEP 1 — Check your CUDA version:
+#   nvidia-smi
+# Look for "CUDA Version: XX.X" in the top right.
+#
+# ─────────────────────────────────────────────
+# STEP 2 — Install PyTorch (pick ONE line):
+#
+#   CUDA 11.8:
+#   pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu118
+#
+#   CUDA 12.1:
+#   pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu121
+#
+#   No GPU:
+#   pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cpu
+#
+# ─────────────────────────────────────────────
+# STEP 3 — Install PyG C++ extensions (pick ONE line):
+#
+#   CUDA 11.8:
+#   pip install torch-scatter torch-sparse torch-cluster torch-spline-conv -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
+#
+#   CUDA 12.1:
+#   pip install torch-scatter torch-sparse torch-cluster torch-spline-conv -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
+#
+#   No GPU:
+#   pip install torch-scatter torch-sparse torch-cluster torch-spline-conv -f https://data.pyg.org/whl/torch-2.1.0+cpu.html
+#
+# ─────────────────────────────────────────────
+# STEP 4 — Install everything else (this file):
+#   pip install -r requirements.txt
+#
+# ─────────────────────────────────────────────
+# STEP 5 — Verify:
+#   python -c "import torch, torch_geometric, jetnet; print('All OK')"
+# ═══════════════════════════════════════════════════════
+
+torch-geometric==2.4.0
+numpy==1.26.4
+scipy==1.13.0
+matplotlib==3.8.4
+scikit-learn==1.4.2
+jetnet==0.2.3
+h5py==3.11.0
+tqdm==4.66.2
+requests==2.31.0
